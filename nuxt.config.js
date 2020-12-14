@@ -28,18 +28,45 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
+  // Modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-i18n',
   ],
 
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
+
   axios: {},
+
+  i18n: {
+    locales: ['en', 'fa'],
+    defaultLocale: 'fa',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          price_iron: 'Price Iron',
+          price_arz: 'Price Arz',
+          price_gold: 'Price Gold',
+          price_online: 'Price Online',
+          home: 'Home',
+          lang_fa: 'persian',
+          lang_en: 'English'
+        },
+        fa: {
+          price_iron: 'قیمت آهن',
+          price_arz: 'قیمت ارز',
+          price_gold: 'قیمت طلا',
+          price_online: 'قیمت آنلاین',
+          home: 'خانه',
+          lang_fa: 'فارسی',
+          lang_en: 'انگلیسی'
+        }
+      }
+    }
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
