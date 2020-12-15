@@ -7,19 +7,19 @@
       ></v-app-bar-nav-icon>
       <v-toolbar-title class="mr-3"> {{ $t('price_online') }} </v-toolbar-title>
 
-      <nuxt-link to="/Gold" class="hidden-sm-and-down">
+      <nuxt-link :to="localePath('/Gold')" class="hidden-sm-and-down">
         <div class="ml-3">
           <span> {{ $t('price_gold') }} </span>
         </div>
       </nuxt-link>
 
-      <nuxt-link to="/arz" class="hidden-sm-and-down">
+      <nuxt-link :to="localePath('/Arz')" class="hidden-sm-and-down">
         <div class="ml-3">
           <span> {{ $t('price_arz') }} </span>
         </div>
       </nuxt-link>
 
-      <nuxt-link to="/Iron" class="hidden-sm-and-down">
+      <nuxt-link :to="localePath('/Iron')" class="hidden-sm-and-down">
         <div class="ml-3">
           <span> {{ $t('price_iron') }} </span>
         </div>
@@ -60,7 +60,7 @@
     <v-card v-if="drawShow">
       <div v-model="drawer" :mini-variant.sync="mini" permanent>
         <v-list-item class="px-2">
-          <nuxt-link to="/">
+          <nuxt-link :to="localePath('/')">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <v-list-item-avatar v-bind="attrs" v-on="on">
@@ -73,7 +73,7 @@
             </v-tooltip>
           </nuxt-link>
 
-          <nuxt-link to="/Gold">
+          <nuxt-link :to="localePath('/Gold')">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <v-list-item-avatar v-bind="attrs" v-on="on">
@@ -86,7 +86,7 @@
             </v-tooltip>
           </nuxt-link>
 
-          <nuxt-link to="/arz">
+          <nuxt-link :to="localePath('/Arz')">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <v-list-item-avatar v-bind="attrs" v-on="on">
@@ -99,7 +99,7 @@
             </v-tooltip>
           </nuxt-link>
 
-          <nuxt-link to="/Iron">
+          <nuxt-link :to="localePath('/Iron')">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <v-list-item-avatar v-bind="attrs" v-on="on">
