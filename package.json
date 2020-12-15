@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "Promise": "^1.0.5",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
-    "nuxt-i18n": "^6.16.0"
+    "nuxt-i18n": "^6.16.0",
+    "vuetify-rtl-style": "^0.2.3"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2",

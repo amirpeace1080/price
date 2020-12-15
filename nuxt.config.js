@@ -8,35 +8,28 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    'vuetify/dist/vuetify.min.css',
+    'vuetify-rtl-style/dist/css/vuetify-rtl-style.min.css',
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
+  buildModules: ['@nuxtjs/vuetify'],
 
   // Modules
-  modules: [
-    '@nuxtjs/axios',
-    'nuxt-i18n',
-  ],
-
+  modules: ['@nuxtjs/axios', 'nuxt-i18n'],
 
   axios: {},
 
@@ -53,7 +46,11 @@ export default {
           price_online: 'Price Online',
           home: 'Home',
           lang_fa: 'persian',
-          lang_en: 'English'
+          lang_en: 'English',
+          type: 'type',
+          price_sell: 'price sell',
+          price_buy: 'price buy',
+          Last_modified: 'Last modified'
         },
         fa: {
           price_iron: 'قیمت آهن',
@@ -62,10 +59,14 @@ export default {
           price_online: 'قیمت آنلاین',
           home: 'خانه',
           lang_fa: 'فارسی',
-          lang_en: 'انگلیسی'
-        }
-      }
-    }
+          lang_en: 'انگلیسی',
+          type: 'نوع',
+          price_sell: 'قیمت فروش',
+          price_buy: 'قیمت خرید',
+          Last_modified: 'آخرین بروزرسانی'
+        },
+      },
+    },
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
@@ -80,13 +81,12 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+          success: colors.green.accent3,
+        },
+      },
+    },
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  }
+  build: {},
 }
